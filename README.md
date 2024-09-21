@@ -8,7 +8,7 @@ Hopefully it will be a useful open-source & transparent guide to investigate the
 ```{r}
 
 library(readxl)
-data_idi <-read_excel ("idi2009-2011.xlsx")
+data_idi <-read_excel("idi2009-2011.xlsx")
 
 view(data_idi)
 print(data_idi)
