@@ -6,11 +6,12 @@ Hopefully it will be a useful open-source & transparent guide to investigate the
 ## Indonesian Democracy Index (IDI) by Province 2009 - 2011
 
 ```{r}
-
 library(readxl)
-data_idi <-read_excel("idi2009-2011.xlsx")
 
-view(data_idi)
+
+data_idi <- read_excel("idi2009-2011.xlsx")
+head(data_idi)
+View(data_idi)
 print(data_idi)
 
 ```
