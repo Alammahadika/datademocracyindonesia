@@ -15,3 +15,8 @@ View(data_idi)
 print(data_idi)
 
 ```
+
+```{r}
+library(readxl)
+data_idi <- read_excel("idi2009-2011.xlsx")
+head(data_idi)
