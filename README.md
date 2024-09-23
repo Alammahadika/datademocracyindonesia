@@ -8,9 +8,14 @@ Hopefully it will be a useful open-source & transparent guide to investigate the
 ```{r}
 library(readxl)
 
+print(idi2009-2011)
+
 ! [Indonesia Democracy Index](./idi2009-2011.xlsx)
 
 ```
+
+! [Indonesia Democracy Index](./idi2009-2011.xlsx)
+
 
 ### Create Visual 
 ```{r}
