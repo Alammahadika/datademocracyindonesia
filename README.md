@@ -8,6 +8,7 @@ Hopefully it will be a useful open-source & transparent guide to investigate the
 ### Read Data Base
 ```{r}
 library(knitr)
+
 markdown_table <-kable(idi2009-2011, format = "markdown")
 cat(markdown_table)
 print(markdown_table)
