@@ -142,3 +142,4 @@ fig <-plot_ly(idi2021_2023, x = ~X2021, y = ~Province, type = 'bar',
 fig
 
 ```
+![Indonesia Democracy Index](./indonesiademocracyindex2.png)
