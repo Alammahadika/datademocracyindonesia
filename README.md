@@ -21,7 +21,7 @@ https://github.com/Alammahadika/Data-Democracy-Indonesia/blob/main/idi2009-2011.
 
 ```
 
-
+https://github.com/Alammahadika/Data-Democracy-Indonesia/blob/main/idi2009-2011.csv
 
 ### Create Visual 
 ```{r}
