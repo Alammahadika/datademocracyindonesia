@@ -7,13 +7,15 @@ Hopefully it will be a useful open-source & transparent guide to investigate the
 
 ```{r}
 library(readxl)
+library(knitr)
 
-print(idi2009-2011)
+idi_data <-read_excel("idi2009-2011.csv)
 
+head(idi_data)
 
 ```
 
-print(idi2009-2011)
+
 
 
 ### Create Visual 
