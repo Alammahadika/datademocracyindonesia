@@ -122,3 +122,23 @@ cat(markdown_table1)
 |West Papua                      | 72.89| 53.64| 82.47|
 |Papua                           | 79.98| 67.23| 75.64|
 
+### Create Visualization Indonesian Democracy Index 2009 - 2011 
+
+```{r}
+library(plotly)
+
+fig <-plot_ly(idi2021_2023, x = ~X2021, y = ~Province, type = 'bar',
+              name = '2021', orientation = 'h') %>%
+  add_trace(x = ~X2022, name = '2022', orientation = 'h') %>%
+  add_trace(x = ~X2023, name = '2023', orientation ='h') %>%
+  layout(yaxis = list(title = 'Province'), xaxis = list(title = 'Index'),
+         barmode = 'stack',
+         title = list(text = "Index of Democracy in Indonesia 2021-2023",
+                      x = 0.2,
+                      pad =list(t = 5, b = 15)
+                      ),
+         margin = list(t = 25)
+         )
+fig
+
+```
