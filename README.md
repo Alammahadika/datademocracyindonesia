@@ -5,8 +5,15 @@ Hopefully it will be a useful open-source & transparent guide to investigate the
 
 ## Indonesian Democracy Index (IDI) by Province 2009 - 2011 
 
-```{r}
+### Read Data Base
 
+```{r}
+library(knitr)
+markdown_table <-kable(idi2009-2011, format = "markdown")
+cat(markdown_table)
+print(markdown_table)
+
+```
 |Province                     |  2009|  2010|  2011|
 |:----------------------------|-----:|-----:|-----:|
 |Aceh                         | 66.29| 65.36| 55.54|
@@ -44,9 +51,6 @@ Hopefully it will be a useful open-source & transparent guide to investigate the
 |West Papua                   | 63.06| 67.75| 61.78|
 |Papua                        | 63.80| 60.26| 59.05|
 
-https://github.com/Alammahadika/Data-Democracy-Indonesia/blob/main/idi2009-2011.csv
-
-```
 ### Create Visual 
 ```{r}
 library(ggplot2)
