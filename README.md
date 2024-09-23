@@ -76,7 +76,7 @@ From the visualization results displayed, we can read the development of the lev
 
 ## [New Methods: Indonesian Democracy Index (IDI) by Province 2021 - 2023](https://www.bps.go.id/id/statistics-table/2/MjE1OSMy/-metode-baru--indeks-demokrasi-indonesia-menurut-provinsi.html)
 
-## Read Data Base
+### Read Data Base
 
 ```{r}
 library(knitr)
