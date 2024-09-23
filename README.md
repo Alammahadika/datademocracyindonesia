@@ -9,12 +9,9 @@ Hopefully it will be a useful open-source & transparent guide to investigate the
 library(readxl)
 library(knitr)
 
-idi_data <-read_excel("idi2009-2011.csv)
-
-head(idi_data)
-
-markdown_table <- kable(idi_data, format = "markdown")
-cat(markdown_table)
+idi2009-2011.csv %>%
+sample_n(30)
+knitr::kable(row.names= FALSE)
 
 ```
 
