@@ -9,9 +9,7 @@ Hopefully it will be a useful open-source & transparent guide to investigate the
 library(readxl)
 
 
-data_idi <- read_excel("idi2009-2011.xlsx")
-head(data_idi)
-View(data_idi)
+idi2009-2011 <- read_xlsx("idi2009-2011.xlsx")
 print(data_idi)
 
 ```
