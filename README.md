@@ -10,11 +10,10 @@ library(readxl)
 
 print(idi2009-2011)
 
-! [Indonesia Democracy Index](./idi2009-2011.xlsx)
 
 ```
 
-! [Indonesia Democracy Index](./idi2009-2011.xlsx)
+print(idi2009-2011)
 
 
 ### Create Visual 
