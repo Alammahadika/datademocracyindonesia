@@ -13,6 +13,9 @@ idi_data <-read_excel("idi2009-2011.csv)
 
 head(idi_data)
 
+markdown_table <- kable(idi_data, format = "markdown")
+cat(markdown_table)
+
 ```
 
 
