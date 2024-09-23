@@ -8,9 +8,7 @@ Hopefully it will be a useful open-source & transparent guide to investigate the
 ```{r}
 library(readxl)
 
-
-idi2009-2011 <- read_xlsx("idi2009-2011.xlsx")
-print(data_idi)
+! [Indonesia Democracy Index](./idi2009-2011.xlsx)
 
 ```
 
@@ -31,4 +29,7 @@ ggplot(idi2009_2011_long, aes(x = reorder(Province, -Index), y = Index, fill = Y
 
 ````
 ![Indonesia Democracy Index](./indonesiademocracyindex1.png)
+
+
+### Decriptive about Indonesian Democracy 2009 - 2011
 
