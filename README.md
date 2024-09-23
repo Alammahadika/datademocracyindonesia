@@ -14,7 +14,21 @@ print(data_idi)
 
 ```
 
+### Create Visual 
 ```{r}
-library(readxl)
-data_idi <- read_excel("idi2009-2011.xlsx")
-head(data_idi)
+library(ggplot2)
+library(tidyr)
+
+ggplot(idi2009_2011_long, aes(x = reorder(Province, -Index), y = Index, fill = Year)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.7)) +
+  coord_flip() +
+  labs(title = "Indonesia Democracy Index 2009-2011",
+       subtitle = "Source: Central Statistica Agency",
+       x = "Province",
+       y = "Index",
+       fill = "Year") +
+  theme_minimal()
+
+
+! [](READ_files/figure-markdown_github/indonesiademocracyindex1.png)
+````
