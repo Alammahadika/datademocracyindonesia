@@ -29,6 +29,5 @@ ggplot(idi2009_2011_long, aes(x = reorder(Province, -Index), y = Index, fill = Y
        fill = "Year") +
   theme_minimal()
 
-
-! [](READ_files/figure-markdown_github/indonesiademocracyindex1.png)
 ````
+! [](READ_files/figure-markdown_github/indonesiademocracyindex1.png)
