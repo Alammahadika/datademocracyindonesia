@@ -14,8 +14,9 @@ sample_n(30)
 knitr::kable(row.names= FALSE)
 
 ```
-
-
+idi2009-2011.csv %>%
+sample_n(30)
+knitr::kable(row.names= FALSE)
 
 
 ### Create Visual 
