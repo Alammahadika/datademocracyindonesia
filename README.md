@@ -76,7 +76,49 @@ From the visualization results displayed, we can read the development of the lev
 
 ## [New Methods: Indonesian Democracy Index (IDI) by Province 2021 - 2023](https://www.bps.go.id/id/statistics-table/2/MjE1OSMy/-metode-baru--indeks-demokrasi-indonesia-menurut-provinsi.html)
 
+## Read Data Base
 
+```{r}
+library(knitr)
 
+markdonw_table1 <- kabl(idi2021_idi2023)
+cat(markdown_table1)
 
+```
+|Province                        | X2023| X2022| X2021|
+|:-------------------------------|-----:|-----:|-----:|
+|Aceh                            | 85.71| 84.66| 85.50|
+|North Sumatera                  | 83.12| 87.66| 88.51|
+|West Sumatera                   | 72.15| 78.01| 76.19|
+|Riau                            | 79.39| 84.46| 88.40|
+|Jambi                           | 65.28| 77.13| 66.50|
+|South Sumatera                  | 80.94| 86.78| 85.08|
+|Bengkulu                        | 74.62| 68.95| 78.81|
+|Lampung                         | 73.79| 79.90| 76.64|
+|Bangka Belitung Island          | 68.34| 66.36| 68.80|
+|Riau Island                     | 79.72| 88.34| 90.91|
+|Special of Capital City Jakarta | 90.66| 87.39| 89.27|
+|West Java                       | 87.97| 90.61| 89.71|
+|Central Tengah                  | 85.84| 88.83| 87.90|
+|Special of Region Yogyakarta    | 77.76| 87.35| 74.31|
+|East Java                       | 87.29| 88.48| 88.11|
+|Banten                          | 83.11| 83.80| 82.26|
+|Bali                            | 85.23| 85.78| 84.62|
+|West Nusa Tenggara              | 64.49| 76.75| 77.41|
+|East Nusa Tenggara              | 90.05| 89.06| 87.99|
+|West Kalimantan                 | 92.16| 91.35| 81.15|
+|Centra Kalimantan               | 82.01| 82.05| 76.09|
+|South Kalimantan                | 81.40| 80.70| 70.13|
+|East Kalimantan                 | 83.00| 91.40| 89.46|
+|North Kalimantan                | 84.59| 77.93| 82.78|
+|North Sulawesi                  | 78.15| 77.76| 82.92|
+|Central Sulawesi                | 87.11| 81.69| 92.76|
+|South Sulawesi                  | 81.70| 83.39| 88.18|
+|Southeast Sulawesi              | 71.72| 87.49| 79.28|
+|Gorontalo                       | 81.68| 65.31| 81.57|
+|West Sulawesi                   | 74.87| 67.78| 67.24|
+|Maluku                          | 70.55| 74.49| 59.36|
+|North Maluku                    | 65.58| 70.84| 80.61|
+|West Papua                      | 72.89| 53.64| 82.47|
+|Papua                           | 79.98| 67.23| 75.64|
 
