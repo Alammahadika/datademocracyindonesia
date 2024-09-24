@@ -74,7 +74,7 @@ ggplot(idi2009_2011_long, aes(x = reorder(Province, -Index), y = Index, fill = Y
 
 From the visualization results displayed, we can read the development of the level of democracy in each province in Indonesia during 2009 to 2011. If interpreted, the Papua Province Red Bar (2009) is longer than the green bar (2010) and blue (2011). This means that the Papua democracy index decreased from 2009 to 2011. In Aceh Province, the red bar (2009) and blue (2011) are slightly longer, indicating a slight increase in democracy in 2010, but then decreased in 2011.
 
-## [New Methods: Indonesian Democracy Index (IDI) by Province 2021 - 2023](https://www.bps.go.id/id/statistics-table/2/MjE1OSMy/-metode-baru--indeks-demokrasi-indonesia-menurut-provinsi.html)
+## [New Methods: Indonesian Democracy Index (IDI) by Province 2021 - 2023 by Aspect of Freedom](https://www.bps.go.id/id/statistics-table/2/MjE1OSMy/-metode-baru--indeks-demokrasi-indonesia-menurut-provinsi.html)
 
 ### Read Data Base
 
@@ -122,7 +122,7 @@ cat(markdown_table1)
 |West Papua                      | 72.89| 53.64| 82.47|
 |Papua                           | 79.98| 67.23| 75.64|
 
-### Create Visualization Indonesian Democracy Index 2009 - 2011 
+### Create Visualization Indonesian Democracy by Aspect of Freedom Index 2021 - 2023 
 
 ```{r}
 library(plotly)
