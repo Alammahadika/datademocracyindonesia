@@ -219,6 +219,8 @@ ggplot(aspectofequality, aes(x = Province, y = Index)) +
   theme_bw()
 ```
 
+![Indonesia Democracy Index](./aspectofequality.png)
+
 ### Intrepretation Indonesian Democracy Index in Aspect of Equality 2023
 
 The image you uploaded shows the 2023 Democracy Index in Indonesia in terms of equality. with the horizontal (X) axis showing the provinces and the vertical (Y) axis showing the index score for each province.
