@@ -81,7 +81,7 @@ From the visualization results displayed, we can read the development of the lev
 ```{r}
 library(knitr)
 
-markdonw_table1 <- kabl(idi2021_idi2023)
+markdonw_table1 <- kable(idi2021_idi2023)
 cat(markdown_table1)
 
 ```
@@ -148,4 +148,80 @@ fig
 The graph you produced shows the Indonesian Democracy Index (IDI) for each province from 2021 to 2023. This data comes from the Indonesian Democracy Index (IDI) and the Central Statistics Agency (BPS). West Sulawesi; This province experienced an increase in its IDI score from 2021 to 2023, with the green bar being longer than the orange and blue bars.West Papua; There was significant fluctuation with the green bar (2023) being longer than the blue bar (2021), but there was a decline in 2022.
 This graph helps provide an overview of how the level of democracy in various Indonesian provinces has changed over the past three years. This can be the basis for further analysis, for example to see what factors influenced the increase or decrease in the IDI score in a particular province.
 
+## [New Methods: Indonesian Democracy Index (IDI) by Province 2023 by Aspect of Equality](https://www.bps.go.id/id/statistics-table/2/MjE2MCMy/-metode-baru--aspek-indeks-demokrasi-indonesia--idi--menurut-provinsi.html)
 
+### Read Data Base
+
+```r{}
+library(knitr)
+
+markdown_table2 <-kable(aspectofequality, format = "markdown")
+cat(markdown_table2)
+print(markdown_table2)
+
+```
+| Province|Label                           | Index|
+|--------:|:-------------------------------|-----:|
+|        1|Papua                           | 60.10|
+|        2|West Papua                      | 72.52|
+|        3|Aceh                            | 74.47|
+|        4|Central Sulawesi                | 74.78|
+|        5|North Maluku                    | 74.84|
+|        6|Nusa Tenggara East              | 75.66|
+|        7|Jambi                           | 76.91|
+|        8|Maluku                          | 77.60|
+|        9|Central Kalimantan              | 77.66|
+|       10|North Sulawesi                  | 78.09|
+|       11|West Kalimantan                 | 78.55|
+|       12|Riau Island                     | 78.82|
+|       13|Bangka Belitung Island          | 78.98|
+|       14|Nusa Tenggara West              | 79.26|
+|       15|Bengkulu                        | 79.27|
+|       16|South Sulawesi                  | 79.52|
+|       17|Riau                            | 80.13|
+|       18|Central Java                    | 80.24|
+|       19|Lampung                         | 80.48|
+|       20|Banten                          | 80.59|
+|       21|East Kalimantan                 | 81.08|
+|       22|North Kalimantan                | 81.24|
+|       23|West Sumatera                   | 81.48|
+|       24|North Sumatera                  | 81.49|
+|       25|West Sulawesi                   | 81.68|
+|       26|South Sumatera                  | 82.14|
+|       27|South Kalimantan                | 82.60|
+|       28|East Jawa                       | 83.24|
+|       29|Gorontalo                       | 83.32|
+|       30|West Java                       | 83.63|
+|       31|Bali                            | 85.75|
+|       32|Special of Capital City Jakarta | 86.51|
+|       33|Southeast Sulawesi              | 87.06|
+|       34|Special of Region Yogyakarta    | 89.21|
+
+### Create Visualization (Geom Text) Indonesian Democracy Index Aspect of Equality
+
+```r{}
+library(ggplot2)
+library(ggrepel)
+
+ggplot(aspectofequality, aes(x = Province, y = Index)) + 
+  geom_point(color = "white", size = 1) +
+  geom_text_repel(aes(label = Label),  
+                  color = "black", 
+                  size = 3.5,
+                  max.overlaps = 30) + 
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(title = "Index Democracy Province in Indonesia 2023 (Aspect of Equality)",
+       subtitle = "Source: Indonesian Democracy Index (IDI) and Central Statistics Agency",
+       x = "Province",
+       y = "Index") + 
+  ylim(min(aspectofequality$Index) - 10, max(aspectofequality$Index) + 10) +
+  theme(plot.title = element_text(face="bold")) +
+  theme_bw()
+```
+
+### Intrepretation Indonesian Democracy Index in Aspect of Equality 2023
+
+The image you uploaded shows the 2023 Democracy Index in Indonesia in terms of equality. with the horizontal (X) axis showing the provinces and the vertical (Y) axis showing the index score for each province.
+Each point on the graph represents the index value for a province, and the provinces are labeled on the graph. For example, Papua has an index score below 60 (the lowest value in the graph), while the Special Region of Yogyakarta is close to 100 (the highest value in the graph).
+The red line shown is a regression or trend line, which shows how the general relationship between provinces and the democracy index in terms of equality. This line tends to rise, indicating that most provinces have higher democracy equality index scores.
+Papua has the lowest index score, indicating challenges in terms of democracy equality in the province. The Special Region of Yogyakarta, Southeast Sulawesi, and the Special Region of Capital City Jakarta have the highest index scores, indicating better levels of democracy equality. Overall, the graph shows that there is variation in the equality index across provinces in Indonesia, but most provinces tend to have index scores in the range of 70 to 90.
