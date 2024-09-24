@@ -144,7 +144,7 @@ fig
 ```
 ![Indonesia Democracy Index](./indonesiademocracyindex2.png)
 
-### Intrepertation Indonesian Democracy Index 2021-2023
+### Intrepertation Indonesian Democracy by Aspect of Freedom Index 2021-2023
 
 The graph you produced shows the Indonesian Democracy Index (IDI) for each province from 2021 to 2023. This data comes from the Indonesian Democracy Index (IDI) and the Central Statistics Agency (BPS). West Sulawesi; This province experienced an increase in its IDI score from 2021 to 2023, with the green bar being longer than the orange and blue bars.West Papua; There was significant fluctuation with the green bar (2023) being longer than the blue bar (2021), but there was a decline in 2022.
 This graph helps provide an overview of how the level of democracy in various Indonesian provinces has changed over the past three years. This can be the basis for further analysis, for example to see what factors influenced the increase or decrease in the IDI score in a particular province.
