@@ -197,7 +197,7 @@ print(markdown_table2)
 |       33|Southeast Sulawesi              | 87.06|
 |       34|Special of Region Yogyakarta    | 89.21|
 
-### Create Visualization (Geom Text) Indonesian Democracy Index Aspect of Equality
+### Create Visualization (Geom Text) Indonesian Democracy Index Aspect of Equality 2023
 
 ```r{}
 library(ggplot2)
@@ -227,3 +227,60 @@ The image you uploaded shows the 2023 Democracy Index in Indonesia in terms of e
 Each point on the graph represents the index value for a province, and the provinces are labeled on the graph. For example, Papua has an index score below 60 (the lowest value in the graph), while the Special Region of Yogyakarta is close to 100 (the highest value in the graph).
 The red line shown is a regression or trend line, which shows how the general relationship between provinces and the democracy index in terms of equality. This line tends to rise, indicating that most provinces have higher democracy equality index scores.
 Papua has the lowest index score, indicating challenges in terms of democracy equality in the province. The Special Region of Yogyakarta, Southeast Sulawesi, and the Special Region of Capital City Jakarta have the highest index scores, indicating better levels of democracy equality. Overall, the graph shows that there is variation in the equality index across provinces in Indonesia, but most provinces tend to have index scores in the range of 70 to 90.
+
+
+## [New Methods: Indonesian Democracy Index (IDI) by Province 2009-2023](https://www.bps.go.id/id/statistics-table?subject=528)
+I immediately tried to make a graph of the Indonesian democracy index from 2009 to 2023 using data from the Central Statistics Agency and the Indonesian Democracy Index.
+
+### Read Data Base
+```r{}
+library(readxl)
+library(knitr)
+
+markdown_table3 <-kable(idi2009_2023, format = "markdown")
+cat(markdown_table3)
+print(markdown_table3)
+
+```
+| Years| Index|
+|-----:|-----:|
+|  2009| 67.30|
+|  2010| 63.17|
+|  2011| 65.48|
+|  2012| 62.63|
+|  2013| 63.72|
+|  2014| 73.04|
+|  2015| 72.82|
+|  2016| 70.09|
+|  2017| 72.11|
+|  2018| 72.39|
+|  2019| 74.92|
+|  2020| 73.66|
+|  2021| 78.12|
+|  2022| 80.41|
+|  2023| 79.51|
+
+### Create Visualization Indonesian Index Democracy (IDI) 2009-2023
+```r{}
+library(ggplot2)
+library(dplyr)
+
+idi2009_20223 <-idi2009_2023 %>%
+  mutate(Index = as.numeric(Index)) #conversion index to be come numeric
+
+idi2009_2023 %>%
+  tail(15) %>%
+  ggplot(aes(x = Years, y = Index, group = 1)) +
+  geom_line(aes(x = Years, y = Index), color = "black", size = 0.1) +
+  geom_point(shape = 20, color = "black", size = 3) +
+  geom_text(aes(label = round(Index, 2)),
+            vjust = -1, hjust = 0.5, size = 3)+
+  theme_test() +
+  labs(title = "Indonesia Democracy Index 2009 - 2023",
+       subtitle = "Source: Central Statistica Agency & IDI", 
+       y = "Index",
+       x = "Years") +
+  scale_x_continuous(breaks = seq(2000, 2023, by = 1))
+
+```
+
