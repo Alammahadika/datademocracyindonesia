@@ -288,3 +288,5 @@ idi2009_2023 %>%
 
 ### Critical Indonesian Democracy Index 2009-2023
 Indonesia's democracy index has increased drastically and remained stable from 2017 to 2020, reaching its highest peak of 80.41. After the highest peak, there was a decline in 2023, although it was still above 79, which indicates a problem in Indonesian democracy. The decline in the period from 2022 to 2023 is a signal that Indonesian democracy is not yet fully stable and is still vulnerable to political and social challenges.
+
+## [New Method: Indicators Indonesian Democracy Index by Province 2021-2023](https://www.bps.go.id/id/statistics-table/2/MjE2MyMy/-metode-baru--indikator-indeks-demokrasi-indonesia--idi--tingkat-provinsi.html)
