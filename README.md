@@ -294,3 +294,113 @@ Indonesia's democracy index has increased drastically and remained stable from 2
 Based on the source of the Indonesian Democracy Index Province 2009 - 2023, Indonesian Democracy in 2023 experienced a decline from 2022 which obtained a value of 80.41. The following is a graphic analysis with the Indonesian Democracy Index Indicator on a Provincial Scale.
 
 ### Read Data Base 
+```r{}
+library(readxl)
+indicatorindexdemocarcyprovince21.23 <-read_xlsx("/Users/mymac/Desktop/Data Github/indicatorindexdemocarcyprovince21-23.xlsx", sheet = "Sheet1") # import data
+View(indicatorindexdemocarcyprovince21.23)
+
+
+library(tidyr)
+library(dplyr) make format long data
+indicatorindexdemocarcyprovince21.23 <-indicatorindexdemocarcyprovince21_23 %>%
+  pivot_longer(cols = c(`2021`, `2022`, `2023`),
+               names_to = "Year",
+               values_to = "Value")
+
+library(knitr)
+markdownindicatoridi21.23 <-kable(indicatorindexdemocarcyprovince21.23, format = "markdown")
+cat(markdownindicatoridi21.23)
+print(markdownindicatoridi21.23) #view result data markdown
+
+```
+|Democracy Indicators                                                                  |Year | Value|
+|:-------------------------------------------------------------------------------------|:----|-----:|
+|Freedom Between Governments                                                           |2021 | 84.00|
+|Freedom Between Governments                                                           |2022 | 80.63|
+|Freedom Between Governments                                                           |2023 | 84.87|
+|Freedom Between Peoples                                                               |2021 | 76.28|
+|Freedom Between Peoples                                                               |2022 | 74.10|
+|Freedom Between Peoples                                                               |2023 | 74.90|
+|Freedom of Belief                                                                     |2021 | 88.41|
+|Freedom of Belief                                                                     |2022 | 86.15|
+|Freedom of Belief                                                                     |2023 | 82.94|
+|Freedom to Make Policies                                                              |2021 | 84.01|
+|Freedom to Make Policies                                                              |2022 | 83.69|
+|Freedom to Make Policies                                                              |2023 | 82.88|
+|Guaranteed Right to Vote & be Election in Election                                    |2021 | 82.00|
+|Guaranteed Right to Vote & be Election in Election                                    |2022 | 82.00|
+|Guaranteed Right to Vote & be Election in Election                                    |2023 | 82.00|
+|Fullfilment of Workers Right                                                          |2021 | 70.18|
+|Fullfilment of Workers Right                                                          |2022 | 73.98|
+|Fullfilment of Workers Right                                                          |2023 | 69.08|
+|Freedom of Pers                                                                       |2021 | 77.71|
+|Freedom of Pers                                                                       |2022 | 78.71|
+|Freedom of Pers                                                                       |2023 | 75.69|
+|Gender Equality                                                                       |2021 | 91.62|
+|Gender Equality                                                                       |2022 | 92.36|
+|Gender Equality                                                                       |2023 | 92.50|
+|Public participation in influencing public policy through representative institutions |2021 | 77.38|
+|Public participation in influencing public policy through representative institutions |2022 | 91.34|
+|Public participation in influencing public policy through representative institutions |2023 | 86.22|
+|Anti-monopoly of economic resources                                                   |2021 | 63.51|
+|Anti-monopoly of economic resources                                                   |2022 | 65.31|
+|Anti-monopoly of economic resources                                                   |2023 | 65.15|
+|Poor people's access to social protection and security                                |2021 | 76.60|
+|Poor people's access to social protection and security                                |2022 | 73.52|
+|Poor people's access to social protection and security                                |2023 | 76.61|
+|Equality Oportunities Jobs Region                                                     |2021 | 94.51|
+|Equality Oportunities Jobs Region                                                     |2022 | 95.03|
+|Equality Oportunities Jobs Region                                                     |2023 | 95.39|
+|Society Access to Public Information                                                  |2021 | 71.90|
+|Society Access to Public Information                                                  |2022 | 76.85|
+|Society Access to Public Information                                                  |2023 | 77.75|
+|Equality in Basic Policy                                                              |2021 | 72.66|
+|Equality in Basic Policy                                                              |2022 | 73.21|
+|Equality in Basic Policy                                                              |2023 | 73.46|
+|Peformance of Legislation                                                             |2021 | 54.35|
+|Peformance of Legislation                                                             |2022 | 54.36|
+|Peformance of Legislation                                                             |2023 | 53.92|
+|Performance of Yudication                                                             |2021 | 87.41|
+|Performance of Yudication                                                             |2022 | 86.82|
+|Performance of Yudication                                                             |2023 | 86.51|
+|Election of Netrality                                                                 |2021 | 64.36|
+|Election of Netrality                                                                 |2022 | 64.36|
+|Election of Netrality                                                                 |2023 | 61.44|
+|Decision of the State Administrative Court regarding government official policies     |2021 | 68.69|
+|Decision of the State Administrative Court regarding government official policies     |2022 | 61.50|
+|Decision of the State Administrative Court regarding government official policies     |2023 | 69.09|
+|Environmental & Living Space Guarantee                                                |2021 | 72.21|
+|Environmental & Living Space Guarantee                                                |2022 | 73.07|
+|Environmental & Living Space Guarantee                                                |2023 | 73.36|
+|Government Budget Transparency                                                        |2021 | 68.91|
+|Government Budget Transparency                                                        |2022 | 83.61|
+|Government Budget Transparency                                                        |2023 | 94.54|
+|Performance Birocration and Public Services                                           |2021 | 78.02|
+|Performance Birocration and Public Services                                           |2022 | 81.36|
+|Performance Birocration and Public Services                                           |2023 | 72.85|
+|Education Politics to Political Party                                                 |2021 | 54.27|
+|Education Politics to Political Party                                                 |2022 | 73.45|
+|Education Politics to Political Party                                                 |2023 | 54.02|
+
+### Indicators Indonesian Democracy Index by Province 2021-2023
+```r{}
+library(ggplot2)
+
+ggplot(indicatorindexdemocarcyprovince21.23, aes(x = Year, y = `Democracy Indicators`,
+                                                 fill = Value)) +
+  geom_tile(colour = "white", linewidth = 1)+
+  scale_fill_gradient(low = "skyblue", high = "darkblue") +
+  geom_text(aes(label = round(Value, 2)), color = 'black', size = 3.5) +
+  theme_minimal()+
+  labs(title = "Indicators Indonesian Democracy Index Source Province 2021-2023",
+       subtitle ="Source: Central Statistica Agency & IDI") +
+  theme(plot.title = element_text(face = "bold"))
+
+```
+
+![Indonesia Democracy Index](./indicatoridiprovince2021-2023.png)
+
+### How to Read Changes in the Indonesian Democracy Index Indicator from 2021-2023
+Stability: If an indicator shows almost the same color from 2021 to 2023, this indicates that the index value of the indicator has been relatively stable over the past three years. Increase: An indicator that shows a shift from a lighter color (lower value) to a darker color (higher value) from 2021 to 2023 indicates an increase in the index. Decrease Conversely, if the shift occurs from a dark color to a light color, this indicates a decrease in the democracy index on the indicator.
+
+
