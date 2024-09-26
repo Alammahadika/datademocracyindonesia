@@ -47,3 +47,7 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+git add .
+git commit -m "Added R scripts"
+git push origin main
