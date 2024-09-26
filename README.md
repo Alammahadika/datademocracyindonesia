@@ -67,7 +67,7 @@ ggplot(idi2009_2011_long, aes(x = reorder(Province, -Index), y = Index, fill = Y
   theme_minimal()
 
 ````
-![Indonesia Democracy Index](./indonesiademocracyindex1.png)
+![Indonesia Democracy Index](./datavisual/indonesiademocracyindex1.png)
 
 
 ### Intrepetation Data about Indonesian Democracy 2009 - 2011
@@ -142,7 +142,7 @@ fig <-plot_ly(idi2021_2023, x = ~X2021, y = ~Province, type = 'bar',
 fig
 
 ```
-![Indonesia Democracy Index](./idiaspectoffreedom.png) 
+![Indonesia Democracy Index](./datavisual/indonesiademocracyindex2.png) 
 ### Intrepertation Indonesian Democracy by Aspect of Freedom Index 2021-2023
 
 The graph you produced shows the Indonesian Democracy Index (IDI) for each province from 2021 to 2023. This data comes from the Indonesian Democracy Index (IDI) and the Central Statistics Agency (BPS). West Sulawesi; This province experienced an increase in its IDI score from 2021 to 2023, with the green bar being longer than the orange and blue bars.West Papua; There was significant fluctuation with the green bar (2023) being longer than the blue bar (2021), but there was a decline in 2022.
@@ -219,7 +219,7 @@ ggplot(aspectofequality, aes(x = Province, y = Index)) +
   theme_bw()
 ```
 
-![Indonesia Democracy Index](./aspectofequality.png)
+![Indonesia Democracy Index](./datavisual/aspectofequality.png)
 
 ### Intrepretation Indonesian Democracy Index in Aspect of Equality 2023
 
@@ -284,7 +284,7 @@ idi2009_2023 %>%
 
 ```
 
-![Indonesia Democracy Index](./indonesiandemocracyindex2009-2023.png)
+![Indonesia Democracy Index](./datavisual/indonesiandemocracyindex2009-2023.png)
 
 ### Critical Indonesian Democracy Index 2009-2023
 Indonesia's democracy index has increased drastically and remained stable from 2017 to 2020, reaching its highest peak of 80.41. After the highest peak, there was a decline in 2023, although it was still above 79, which indicates a problem in Indonesian democracy. The decline in the period from 2022 to 2023 is a signal that Indonesian democracy is not yet fully stable and is still vulnerable to political and social challenges.
@@ -398,7 +398,7 @@ ggplot(indicatorindexdemocarcyprovince21.23, aes(x = Year, y = `Democracy Indica
 
 ```
 
-![Indonesia Democracy Index](./indicatoridiprovince2021-2023.png)
+![Indonesia Democracy Index](./datavisual/indicatoridiprovince2021-2023.png)
 
 ### How to Read Changes in the Indonesian Democracy Index Indicator from 2021-2023
 Stability: If an indicator shows almost the same color from 2021 to 2023, this indicates that the index value of the indicator has been relatively stable over the past three years. Increase: An indicator that shows a shift from a lighter color (lower value) to a darker color (higher value) from 2021 to 2023 indicates an increase in the index. Decrease Conversely, if the shift occurs from a dark color to a light color, this indicates a decrease in the democracy index on the indicator.
