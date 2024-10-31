@@ -6,7 +6,7 @@ Hopefully it will be a useful open-source & transparent guide to investigate the
 ## [Indonesian Democracy Index (IDI) by Province 2009 - 2011](https://www.bps.go.id/id/statistics-table/2/NTk4IzI=/indeks-demokrasi-indonesia--idi--menurut-provinsi.html)
 
 ### Read Data Base
-```{r}
+```r
 library(knitr)
 
 markdown_table <-kable(idi2009-2011, format = "markdown")
@@ -52,7 +52,7 @@ print(markdown_table)
 |Papua                        | 63.80| 60.26| 59.05|
 
 ### Create Visualization Indonesian Democracy Index 2009 - 2011  
-```{r}
+```r
 library(ggplot2)
 library(tidyr)
 
@@ -78,7 +78,7 @@ From the visualization results displayed, we can read the development of the lev
 
 ### Read Data Base
 
-```{r}
+```r
 library(knitr)
 
 markdonw_table1 <- kable(idi2021_idi2023)
@@ -124,7 +124,7 @@ cat(markdown_table1)
 
 ### Create Visualization Indonesian Democracy by Aspect of Freedom Index 2021 - 2023 
 
-```{r}
+```r
 library(plotly)
 
 fig <-plot_ly(idi2021_2023, x = ~X2021, y = ~Province, type = 'bar',
@@ -152,7 +152,7 @@ This graph helps provide an overview of how the level of democracy in various In
 
 ### Read Data Base
 
-```r{}
+```r
 library(knitr)
 
 markdown_table2 <-kable(aspectofequality, format = "markdown")
@@ -199,7 +199,7 @@ print(markdown_table2)
 
 ### Create Visualization (Geom Text) Indonesian Democracy Index Aspect of Equality 2023
 
-```r{}
+```r
 library(ggplot2)
 library(ggrepel)
 
@@ -233,7 +233,7 @@ Papua has the lowest index score, indicating challenges in terms of democracy eq
 I immediately tried to make a graph of the Indonesian democracy index from 2009 to 2023 using data from the Central Statistics Agency and the Indonesian Democracy Index.
 
 ### Read Data Base
-```r{}
+```r
 library(readxl)
 library(knitr)
 
@@ -261,7 +261,7 @@ print(markdown_table3)
 |  2023| 79.51|
 
 ### Create Visualization Indonesian Index Democracy (IDI) 2009-2023
-```r{}
+```r
 library(ggplot2)
 library(dplyr)
 
@@ -294,7 +294,7 @@ Indonesia's democracy index has increased drastically and remained stable from 2
 Based on the source of the Indonesian Democracy Index Province 2009 - 2023, Indonesian Democracy in 2023 experienced a decline from 2022 which obtained a value of 80.41. The following is a graphic analysis with the Indonesian Democracy Index Indicator on a Provincial Scale.
 
 ### Read Data Base 
-```r{}
+```r
 library(readxl)
 indicatorindexdemocarcyprovince21.23 <-read_xlsx("/Users/mymac/Desktop/Data Github/indicatorindexdemocarcyprovince21-23.xlsx", sheet = "Sheet1") # import data
 View(indicatorindexdemocarcyprovince21.23)
@@ -383,7 +383,7 @@ print(markdownindicatoridi21.23) #view result data markdown
 |Education Politics to Political Party                                                 |2023 | 54.02|
 
 ### Indicators Indonesian Democracy Index by Province 2021-2023
-```r{}
+```r
 library(ggplot2)
 
 ggplot(indicatorindexdemocarcyprovince21.23, aes(x = Year, y = `Democracy Indicators`,
