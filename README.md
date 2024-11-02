@@ -409,7 +409,53 @@ This explain scores data to the translate in ranking numeric scala number 1 (Low
 
 ### Data Frame 
 ```r
+library(tibble) 
+# Create Data frame to table
 
-
+databtiidn <- tibble::tibble(
+  Index = c("Ranking Status Index", "S | Status Index", "SII | Democracy Status", 
+            "Q1 | Stateness", "  Q1.1 | Monopoly on the use of force", 
+            "  Q1.2 | State Identity", "  Q1.3 | No Interferences Religion Dogma", 
+            "  Q1.4 | Basic Information", "Q2 | Political Participation", 
+            "  Q2.1 | Free and fair election", "  Q2.2 | Effective power to govern", 
+            "  Q2.3 | Association / assembly rights", "  Q2.4 | Freedom Experience", 
+            "Q3 | Rule of Law", "  Q3.1 | Separation of powers", 
+            "  Q3.2 | Independent judiciary", "  Q3.3 | Prosecution of office abuse", 
+            "  Q3.4 | Civil rights", "Q4 | Stability of Democratic Institutions", 
+            "  Q4.1 | Performance of democratic institutions", 
+            "  Q4.2 | Commitment to democratic institutions", 
+            "Q5 | Political and Social Integration", "  Q5.1 | Party system", 
+            "  Q5.2 | Interest groups", "  Q5.3 | Approval of democracy", 
+            "  Q5.4 | Social capital", "SII | Economy Status", 
+            "Q6 | Level of Socioeconomic Development", "  Q6.1 | Socioeconomic barriers", 
+            "Q7 | Organization of the Market and Competition", 
+            "  Q7.1 | Market organization", "  Q7.2 | Competition policy", 
+            "  Q7.3 | Liberalization of foreign trade", "  Q7.4 | Banking system", 
+            "Q8 | Monetary and Fiscal Stability", "  Q8.1 | Monetary stability", 
+            "  Q8.2 | Fiscal stability", "Q9 | Private Property", 
+            "  Q9.1 | Property rights", "  Q9.2 | Private enterprise", 
+            "Q10 | Welfare Regime", "  Q10.1 | Social safety nets", 
+            "  Q10.2 | Equal opportunity", "Q11 | Economic Performance", 
+            "  Q11.1 | Output strength", "Q12 | Sustainability", 
+            "  Q12.1 | Environmental policy", "  Q12.2 | Education / R&D policy", 
+            "Ranking Governance Index", "G | Governance Index", 
+            "Q13 | Level of Difficulty", "  Q13.1 | Structural constraints", 
+            "  Q13.2 | Civil society traditions", "  Q13.3 | Conflict intensity", 
+            "  Q13.4 | GNI p.c. Atlas method rescaled", 
+            "  Q13.5 | UN Educ. Index rescaled", "GII | Governance Performance", 
+            "Q14 | Steering Capability", "  Q14.1 | Prioritization", 
+            "  Q14.2 | Implementation", "  Q14.3 | Policy learning", 
+            "Q15 | Resource Efficiency", "  Q15.1 | Efficient use of assets", 
+            "  Q15.2 | Policy coordination", "  Q15.3 | Anti-corruption policy", 
+            "Q16 | Consensus-Building", "  Q16.1 | Consensus on goals", 
+            "  Q16.2 | Anti-democratic actors", "  Q16.3 | Cleavage / conflict management", 
+            "  Q16.4 | Public consultation", "  Q16.5 | Reconciliation", 
+            "Q17 | International Cooperation", "  Q17.1 | Effective use of support", 
+            "  Q17.2 | Credibility", "  Q17.3 | Regional cooperation"),
+  Score = c(44, 6.19, 6.30, 6.5, 7, 7, 5, 7, 5.8, 8, 6, 5, 4, 
+            6.0, 8, 5, 5, 6, 6.5, 7, 6, 6.8, 6, 7, 7, 7, 6.7, 5.0, 5, 
+            6.5, 6, 5, 7, 8, 7.5, 8, 8, 6.0, 6, 6, 5.5, 6, 5, 8.0, 8, 
+            4.0, 3, 5, 38, 5.48, 5.1, 5.1, 6, 5, 6, 3, 6.15, 6.3, 7, 
+            6, 6, 5.0, 5, 6, 4, 5.6, 6, 5, 6, 6, 5, 7.7, 7, 8, 8))
 
 ```
