@@ -405,7 +405,9 @@ Stability: If an indicator shows almost the same color from 2021 to 2023, this i
 
 ## [Transformation Towards Democrarcy Indonesia Source From the Bertelsmann Stiftung’s Transformation Index (BTI) 2024](https://bti-project.org/fileadmin/api/content/en/downloads/reports/country_report_2024_IDN.pdf)
 
+This explain scores data to the translate in ranking numeric scala number 1 (Lowest) to scale number 10 (Highest).
 
+### Data Frame 
 ```r
 
 
