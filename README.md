@@ -404,3 +404,10 @@ ggplot(indicatorindexdemocarcyprovince21.23, aes(x = Year, y = `Democracy Indica
 Stability: If an indicator shows almost the same color from 2021 to 2023, this indicates that the index value of the indicator has been relatively stable over the past three years. Increase: An indicator that shows a shift from a lighter color (lower value) to a darker color (higher value) from 2021 to 2023 indicates an increase in the index. Decrease Conversely, if the shift occurs from a dark color to a light color, this indicates a decrease in the democracy index on the indicator.
 
 ## [Transformation Towards Democrarcy Indonesia Source From the Bertelsmann Stiftung’s Transformation Index (BTI) 2024](https://bti-project.org/fileadmin/api/content/en/downloads/reports/country_report_2024_IDN.pdf)
+
+
+```r
+
+
+
+```
