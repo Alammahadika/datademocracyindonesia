@@ -458,4 +458,16 @@ databtiidn <- tibble::tibble(
             4.0, 3, 5, 38, 5.48, 5.1, 5.1, 6, 5, 6, 3, 6.15, 6.3, 7, 
             6, 6, 5.0, 5, 6, 4, 5.6, 6, 5, 6, 6, 5, 7.7, 7, 8, 8))
 
+
+
+# import to excel
+library(writexl)
+write_xlsx(databtiidn, "databtiidn.xlsx")
+
+# import from library
+library(readxl)
+databtiidn <- read_excel("~/Desktop/Data Github/databtiidn.xlsx")
+print(databtiidn)
+
+
 ```
