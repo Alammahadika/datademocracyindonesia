@@ -407,7 +407,7 @@ Stability: If an indicator shows almost the same color from 2021 to 2023, this i
 
 This explain scores data to the translate in ranking numeric scala number 1 (Lowest) to scale number 10 (Highest).
 
-### Data Frame 
+### Data Frame FALSE !
 ```r
 library(tibble) 
 # Create Data frame to table
@@ -468,6 +468,54 @@ write_xlsx(databtiidn, "databtiidn.xlsx")
 library(readxl)
 databtiidn <- read_excel("~/Desktop/Data Github/databtiidn.xlsx")
 print(databtiidn)
+
+
+```
+# Data Frame Other Form FIXED
+
+```r
+
+newdata <- data.frame(
+  Category = c('Democracy Status', 'Stateness', 'Monopoly on the use of force', 'State Identity', 'No Interferences Religion Dogma', 'Basic Information',
+               'Political Participation', 'Free and fair election', 'Effective power to govern', 'Association / assembly rights', 'Freedom Experience',
+               'Rule of Law', 'Separation of powers', 'Independent judiciary', 'Prosecution of office abuse', 'Civil rights',
+               'Stability of Democratic Institutions', 'Performance of democratic institutions', 'Commitment to democratic institutions',
+               'Political and Social Integration', 'Party system', 'Interest groups', 'Approval of democracy', 'Social capital',
+               'Economy Status', 'Level of Socioeconomic Development', 'Socioeconomic barriers',
+               'Organization of the Market and Competition', 'Market organization', 'Competition policy', 'Liberalization of foreign trade',
+               'Banking system', 'Monetary and Fiscal Stability', 'Monetary stability', 'Fiscal stability',
+               'Private Property', 'Property rights', 'Private enterprise',
+               'Welfare Regime', 'Social safety nets', 'Equal opportunity',
+               'Economic Performance', 'Output strength', 'Sustainability', 'Environmental policy', 'Education / R&D policy',
+               'Governance Index', 'Level of Difficulty', 'Structural constraints', 'Civil society traditions', 
+               'Conflict intensity', 'GNI p.c. Atlas method rescaled','UN Educ. Index rescaled',
+               'Governance Performance','Steering Capability','Prioritization','Implementation','Policy learning',
+               'Resource Efficiency','Efficient use of assets','Policy coordination','Anti-corruption policy',
+               'Consensus-Building','Consensus on goals','Anti-democratic actors','Cleavage / conflict management','Public consultation','Reconciliation',
+               'International Cooperation','Effective use of support','Credibility','Regional cooperation'),
+  Score = c(6.3, 6.5, 7, 7, 5, 7, 5.8, 8, 6, 5, 4, 6, 8, 5, 5, 6, 6.5, 7, 6, 6.8, 6, 7, 7, 7,
+            6.7, 5, 5, 6.5, 6, 5, 7, 8, 7.5, 8, 8, 6, 6, 6,
+            5.5, 6, 5,
+            8, 8, 4, 3, 5,
+            5.48, 5.1, 5.1, 6,
+            5, 6 ,3,
+            6.15 ,6.3 ,7 ,6 ,6,
+            5 ,5 ,6 ,4,
+            5.6 ,6 ,5 ,6 ,6 ,5,
+            7.7 ,7 ,8 ,8)
+)
+
+# Create a circular bar plot
+newdata <- newdata %>%
+  mutate(id = row_number()) %>%
+  arrange(id)
+
+# Add empty bars to complete the circle
+empty_bar <- 10
+to_add <- matrix(NA, empty_bar, ncol(newdata))
+colnames(to_add) <- colnames(data)
+newdata <- rbind(newdata, to_add)
+newdata$id <- seq(1, nrow(newdata))
 
 
 ```
