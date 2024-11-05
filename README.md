@@ -523,8 +523,9 @@ print(data)
 72                       Regional cooperation  8.00
 
 ```
+###  Assign colors based on Category
 ```r
-# Assign colors based on Category
+
    data <- data %>%
      mutate(Color = case_when(
        Category %in% c('Democracy Status', 'Stateness', 'Monopoly on the use of force', 'State Identity', 'No Interferences Religion Dogma', 'Basic Information',
@@ -543,7 +544,7 @@ print(data)
      mutate(id = row_number()) %>%
      arrange(id)
    
-   # Add more empty bars for spacing
+   # Add more empty bars for spacing for model visual circular
    empty_bar <- 20
    to_add <- matrix(NA, empty_bar, ncol(data))
    colnames(to_add) <- colnames(data)
