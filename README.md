@@ -693,3 +693,8 @@ library(ggplot2)
    
 ```
 ![Indonesia Democracy Index](datavisual/transformationindexindonesia.png)
+
+### Transformation Index Indonesia Source:Bertelsmann Stiftung’s Transformation Index (BTI) 2024
+We can distinguish some colors, red by Political Transformation, blue by Economic Transformation and green by Governance. Interpretation per first category, Political Transformation seems to have a high red bar indicating about political stabilization, quality democracy, free society and, protection of human rights by the government.
+And than Economic Transformation, this category has aspects such as market competition, policy trade, economic stabilization, and money infrastructure. Low scores have challenges in capital efficiency or economic stabilization.
+Lastly about Governance, has aspects of anti-corruption policy, asset utilization, and international relations. High scores indicate effective governance by the government and low corruption. Low scores may indicate Indonesia's challenges in developing effective institutions.
