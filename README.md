@@ -692,3 +692,4 @@ library(ggplot2)
    print(p)
    
 ```
+![Indonesia Democracy Index](datavisual/transformationindexindonesia.png)
