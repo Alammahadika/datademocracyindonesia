@@ -510,11 +510,12 @@ library(ggplot2)
      # Display Score values
      geom_text(aes(x = as.factor(id), y = Score - 0.5, label = Score), color = "white", size = 2) +
      # Add central legend
-     annotate("text", x = 0, y = -12, label = "Indonesia Transformation Index 2024", color = "black", fontface = "bold", size = 3) +
+ annotate("text", x = 0, y = -12, label = "Indonesia Transformation Index 2024", color = "black", fontface = "bold", size = 3) +
      annotate("text", x = 0, y = -13, label = "Political Transformation", color = "darkred",fontface = "bold", size = 2) +
      annotate("text", x = 0, y = -14, label = "Economic Transformation", color = "darkblue",fontface = "bold", size = 2) +
      annotate("text", x = 0, y = -15, label = "Governance", color = "darkgreen", fontface = "bold", size = 2) 
      
+   # show visual graph  
    print(p)
    
 ```
