@@ -450,7 +450,7 @@ This explain scores data to the translate in ranking numeric scala number 1 (Low
    # Assign colors based on Category
    data <- data %>%
      mutate(Color = case_when(
-       Category %in% c('Democracy Status', 'Stateness', 'Monopoly\n on the use of force', 'State Identity', 'No Interferences Religion Dogma', 'Basic Information',
+       Category %in% c('Democracy Status', 'Stateness', 'Monopoly on the use of force', 'State Identity', 'No Interferences Religion Dogma', 'Basic Information',
                        'Political Participation', 'Free and fair election', 'Effective power to govern', 'Association / assembly rights', 'Freedom Experience',
                        'Rule of Law', 'Separation of powers', 'Independent judiciary', 'Prosecution of office abuse', 'Civil rights',
                        'Stability of Democratic Institutions', 'Performance of democratic institutions', 'Commitment to democratic institutions',
