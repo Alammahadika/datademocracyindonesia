@@ -173,3 +173,105 @@ ggplot(indicatorindexdemocarcyprovince21.23, aes(x = Year, y = `Democracy Indica
   theme(plot.title = element_text(face = "bold"))
 
 
+## Create circular graph analysis visual
+
+ library(ggplot2)
+   library(dplyr)
+   library(tidyr)
+   
+   # Create a data frame from the provided data
+   data <- data.frame(
+     Category = c('Democracy Status', 'Stateness', 'Monopoly\n on the use of force', 'State Identity', 'No Interferences Religion Dogma', 'Basic Information',
+                  'Political Participation', 'Free and fair election', 'Effective power to govern', 'Association / assembly rights', 'Freedom Experience',
+                  'Rule of Law', 'Separation of powers', 'Independent judiciary', 'Prosecution of office abuse', 'Civil rights',
+                  'Stability of Democratic Institutions', 'Performance of democratic institutions', 'Commitment to democratic institutions',
+                  'Political and Social Integration', 'Party system', 'Interest groups', 'Approval of democracy', 'Social capital',
+                  'Economy Status', 'Level of Socioeconomic Development', 'Socioeconomic barriers',
+                  'Organization of the Market and Competition', 'Market organization', 'Competition policy', 'Liberalization of foreign trade',
+                  'Banking system', 'Monetary and Fiscal Stability', 'Monetary stability', 'Fiscal stability',
+                  'Private Property', 'Property rights', 'Private enterprise',
+                  'Welfare Regime', 'Social safety nets', 'Equal opportunity',
+                  'Economic Performance', 'Output strength', 'Sustainability', 'Environmental policy', 'Education / R&D policy',
+                  'Governance Index', 'Level of Difficulty', 'Structural constraints', 'Civil society traditions', 
+                  'Conflict intensity', 'GNI p.c. Atlas method rescaled','UN Educ. Index rescaled',
+                  'Governance Performance','Steering Capability','Prioritization','Implementation','Policy learning',
+                  'Resource Efficiency','Efficient use of assets','Policy coordination','Anti-corruption policy',
+                  'Consensus-Building','Consensus on goals','Anti-democratic actors','Cleavage / conflict management','Public consultation','Reconciliation',
+                  'International Cooperation','Effective use of support','Credibility','Regional cooperation'),
+     Score = c(6.3, 6.5, 7, 7, 5, 7, 5.8, 8, 6, 5, 4, 6, 8, 5, 5, 6, 6.5, 7, 6, 6.8, 6, 7, 7, 7,
+               6.7, 5, 5, 6.5, 6, 5, 7, 8, 7.5, 8, 8, 6, 6, 6,
+               5.5, 6, 5,
+               8, 8, 4, 3, 5,
+               5.48, 5.1, 5.1, 6,
+               5, 6 ,3,
+               6.15 ,6.3 ,7 ,6 ,6,
+               5 ,5 ,6 ,4,
+               5.6 ,6 ,5 ,6 ,6 ,5,
+               7.7 ,7 ,8 ,8)
+   )
+ 
+   print(data)
+ 
+   # Assign colors based on Category
+data <- data %>%
+mutate(Color = case_when(
+  Category %in% c('Democracy Status', 'Stateness', 'Monopoly\n on the use of force', 'State Identity', 'No Interferences Religion Dogma', 'Basic Information',
+                       'Political Participation', 'Free and fair election', 'Effective power to govern', 'Association / assembly rights', 'Freedom Experience',
+                       'Rule of Law', 'Separation of powers', 'Independent judiciary', 'Prosecution of office abuse', 'Civil rights',
+                       'Stability of Democratic Institutions', 'Performance of democratic institutions', 'Commitment to democratic institutions',
+                       'Political and Social Integration', 'Party system', 'Interest groups', 'Approval of democracy', 'Social capital') ~ 'darkred',
+  Category %in% c('Economy Status', 'Level of Socioeconomic Development', 'Socioeconomic barriers',
+                       'Organization of the Market and Competition', 'Market organization', 'Competition policy', 'Liberalization of foreign trade',
+                       'Banking system', 'Monetary and Fiscal Stability', 'Monetary stability', 'Fiscal stability',
+                       'Private Property', 'Property rights', 'Private enterprise',
+                       'Welfare Regime', 'Social safety nets', 'Equal opportunity',
+                       'Economic Performance', 'Output strength', 'Sustainability', 'Environmental policy', 'Education / R&D policy') ~ 'darkblue',
+       TRUE ~ 'darkgreen'
+     )) %>%
+     mutate(id = row_number()) %>%
+     arrange(id)
+   
+   # Add more empty bars for spacing
+   empty_bar <- 20
+   to_add <- matrix(NA, empty_bar, ncol(data))
+   colnames(to_add) <- colnames(data)
+   data <- rbind(data, to_add)
+   data$id <- seq(1, nrow(data))
+ 
+ print(data)  
+     
+   # Create the plot
+   label_data <- data
+   number_of_bar <- nrow(data)
+   angle <- 90 - 360 * (label_data$id - 0.5) / number_of_bar
+   label_data$hjust <- ifelse(angle < -90, 1, 0)
+   label_data$angle <- ifelse(angle < -90, angle + 180, angle)
+   
+   p <- ggplot(data, aes(x = as.factor(id), y = Score, fill = Color)) +      
+     geom_bar(stat = "identity", color = "white") +
+     scale_fill_identity() +
+     ylim(-15, 10) +  # Adjust to make the circle fuller
+     theme_bw() +
+     theme(
+       axis.text = element_blank(),
+       axis.title = element_blank(),
+       panel.grid = element_blank(),
+       plot.margin = unit(rep(-2, 4), "cm") 
+     ) +
+     coord_polar(start = 0) + 
+     # Display Category names
+     geom_text(data = label_data, aes(x = id, y = Score + 1.5, label = Category, hjust = hjust), color = "black", fontface = "bold", alpha = 0.7, size = 1.5, angle = label_data$angle, inherit.aes = FALSE) +
+     # Display Score values
+     geom_text(aes(x = as.factor(id), y = Score - 0.5, label = Score), color = "white", size = 2) +
+     # Add central legend
+     annotate("text", x = 0, y = -12, label = "Indonesia Transformation Index 2024", color = "black", fontface = "bold", size = 3) +
+     annotate("text", x = 0, y = -13, label = "Political Transformation", color = "darkred",fontface = "bold", size = 2) +
+     annotate("text", x = 0, y = -14, label = "Economic Transformation", color = "darkblue",fontface = "bold", size = 2) +
+     annotate("text", x = 0, y = -15, label = "Governance", color = "darkgreen", fontface = "bold", size = 2) 
+     
+   print(p)
+
+
+
+
+
