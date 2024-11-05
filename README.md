@@ -551,6 +551,101 @@ print(data)
    data <- rbind(data, to_add)
    data$id <- seq(1, nrow(data))
 
+print(data)
+
+Category Score     Color id
+1                            Democracy Status  6.30   darkred  1
+2                                   Stateness  6.50   darkred  2
+3              Monopoly\n on the use of force  7.00   darkred  3
+4                              State Identity  7.00   darkred  4
+5             No Interferences Religion Dogma  5.00   darkred  5
+6                           Basic Information  7.00   darkred  6
+7                     Political Participation  5.80   darkred  7
+8                      Free and fair election  8.00   darkred  8
+9                   Effective power to govern  6.00   darkred  9
+10              Association / assembly rights  5.00   darkred 10
+11                         Freedom Experience  4.00   darkred 11
+12                                Rule of Law  6.00   darkred 12
+13                       Separation of powers  8.00   darkred 13
+14                      Independent judiciary  5.00   darkred 14
+15                Prosecution of office abuse  5.00   darkred 15
+16                               Civil rights  6.00   darkred 16
+17       Stability of Democratic Institutions  6.50   darkred 17
+18     Performance of democratic institutions  7.00   darkred 18
+19      Commitment to democratic institutions  6.00   darkred 19
+20           Political and Social Integration  6.80   darkred 20
+21                               Party system  6.00   darkred 21
+22                            Interest groups  7.00   darkred 22
+23                      Approval of democracy  7.00   darkred 23
+24                             Social capital  7.00   darkred 24
+25                             Economy Status  6.70  darkblue 25
+26         Level of Socioeconomic Development  5.00  darkblue 26
+27                     Socioeconomic barriers  5.00  darkblue 27
+28 Organization of the Market and Competition  6.50  darkblue 28
+29                        Market organization  6.00  darkblue 29
+30                         Competition policy  5.00  darkblue 30
+31            Liberalization of foreign trade  7.00  darkblue 31
+32                             Banking system  8.00  darkblue 32
+33              Monetary and Fiscal Stability  7.50  darkblue 33
+34                         Monetary stability  8.00  darkblue 34
+35                           Fiscal stability  8.00  darkblue 35
+36                           Private Property  6.00  darkblue 36
+37                            Property rights  6.00  darkblue 37
+38                         Private enterprise  6.00  darkblue 38
+39                             Welfare Regime  5.50  darkblue 39
+40                         Social safety nets  6.00  darkblue 40
+41                          Equal opportunity  5.00  darkblue 41
+42                       Economic Performance  8.00  darkblue 42
+43                            Output strength  8.00  darkblue 43
+44                             Sustainability  4.00  darkblue 44
+45                       Environmental policy  3.00  darkblue 45
+46                     Education / R&D policy  5.00  darkblue 46
+47                           Governance Index  5.48 darkgreen 47
+48                        Level of Difficulty  5.10 darkgreen 48
+49                     Structural constraints  5.10 darkgreen 49
+50                   Civil society traditions  6.00 darkgreen 50
+51                         Conflict intensity  5.00 darkgreen 51
+52             GNI p.c. Atlas method rescaled  6.00 darkgreen 52
+53                    UN Educ. Index rescaled  3.00 darkgreen 53
+54                     Governance Performance  6.15 darkgreen 54
+55                        Steering Capability  6.30 darkgreen 55
+56                             Prioritization  7.00 darkgreen 56
+57                             Implementation  6.00 darkgreen 57
+58                            Policy learning  6.00 darkgreen 58
+59                        Resource Efficiency  5.00 darkgreen 59
+60                    Efficient use of assets  5.00 darkgreen 60
+61                        Policy coordination  6.00 darkgreen 61
+62                     Anti-corruption policy  4.00 darkgreen 62
+63                         Consensus-Building  5.60 darkgreen 63
+64                         Consensus on goals  6.00 darkgreen 64
+65                     Anti-democratic actors  5.00 darkgreen 65
+66             Cleavage / conflict management  6.00 darkgreen 66
+67                        Public consultation  6.00 darkgreen 67
+68                             Reconciliation  5.00 darkgreen 68
+69                  International Cooperation  7.70 darkgreen 69
+70                   Effective use of support  7.00 darkgreen 70
+71                                Credibility  8.00 darkgreen 71
+72                       Regional cooperation  8.00 darkgreen 72
+73                                       <NA>    NA      <NA> 73
+74                                       <NA>    NA      <NA> 74
+75                                       <NA>    NA      <NA> 75
+76                                       <NA>    NA      <NA> 76
+77                                       <NA>    NA      <NA> 77
+78                                       <NA>    NA      <NA> 78
+79                                       <NA>    NA      <NA> 79
+80                                       <NA>    NA      <NA> 80
+81                                       <NA>    NA      <NA> 81
+82                                       <NA>    NA      <NA> 82
+83                                       <NA>    NA      <NA> 83
+84                                       <NA>    NA      <NA> 84
+85                                       <NA>    NA      <NA> 85
+86                                       <NA>    NA      <NA> 86
+87                                       <NA>    NA      <NA> 87
+88                                       <NA>    NA      <NA> 88
+89                                       <NA>    NA      <NA> 89
+90                                       <NA>    NA      <NA> 90
+91                                       <NA>    NA      <NA> 91
+92                                       <NA>    NA      <NA> 92
 ```
 ## Indonesia Transformation Index 2024
 
