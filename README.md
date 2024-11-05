@@ -85,7 +85,7 @@ markdonw_table1 <- kable(idi2021_idi2023)
 cat(markdown_table1)
 
 ```
-|Province                        | X2023| X2022| X2021|
+|Province                        | 2023 | 2022 |2021  |
 |:-------------------------------|-----:|-----:|-----:|
 |Aceh                            | 85.71| 84.66| 85.50|
 |North Sumatera                  | 83.12| 87.66| 88.51|
