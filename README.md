@@ -454,14 +454,14 @@ This explain scores data to the translate in ranking numeric scala number 1 (Low
                        'Political Participation', 'Free and fair election', 'Effective power to govern', 'Association / assembly rights', 'Freedom Experience',
                        'Rule of Law', 'Separation of powers', 'Independent judiciary', 'Prosecution of office abuse', 'Civil rights',
                        'Stability of Democratic Institutions', 'Performance of democratic institutions', 'Commitment to democratic institutions',
-                       'Political and Social Integration', 'Party system', 'Interest groups', 'Approval of democracy', 'Social capital') ~ 'red',
+                       'Political and Social Integration', 'Party system', 'Interest groups', 'Approval of democracy', 'Social capital') ~ 'darkred',
        Category %in% c('Economy Status', 'Level of Socioeconomic Development', 'Socioeconomic barriers',
                        'Organization of the Market and Competition', 'Market organization', 'Competition policy', 'Liberalization of foreign trade',
                        'Banking system', 'Monetary and Fiscal Stability', 'Monetary stability', 'Fiscal stability',
                        'Private Property', 'Property rights', 'Private enterprise',
                        'Welfare Regime', 'Social safety nets', 'Equal opportunity',
-                       'Economic Performance', 'Output strength', 'Sustainability', 'Environmental policy', 'Education / R&D policy') ~ 'blue',
-       TRUE ~ 'green'
+                       'Economic Performance', 'Output strength', 'Sustainability', 'Environmental policy', 'Education / R&D policy') ~ 'darkblue',
+       TRUE ~ 'darkgreen'
      )) %>%
      mutate(id = row_number()) %>%
      arrange(id)
@@ -503,9 +503,9 @@ library(ggplot2)
      geom_text(aes(x = as.factor(id), y = Score - 0.5, label = Score), color = "black", size = 2) +
      # Add central legend
      annotate("text", x = 0, y = -5, label = "Indonesia Transformation Index 2024", color = "black", fontface = "bold", size = 3) +
-     annotate("text", x = 0, y = -6, label = "Political Transformation", color = "red",fontface = "bold", size = 2) +
-     annotate("text", x = 0, y = -7, label = "Economic Transformation", color = "blue",fontface = "bold", size = 2) +
-     annotate("text", x = 0, y = -8, label = "Governance", color = "green", fontface = "bold", size = 2) 
+     annotate("text", x = 0, y = -6, label = "Political Transformation", color = "darkred",fontface = "bold", size = 2) +
+     annotate("text", x = 0, y = -7, label = "Economic Transformation", color = "darkblue",fontface = "bold", size = 2) +
+     annotate("text", x = 0, y = -8, label = "Governance", color = "darkgreen", fontface = "bold", size = 2) 
      
    
    print(p)
