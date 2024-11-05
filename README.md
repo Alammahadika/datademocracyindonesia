@@ -479,7 +479,7 @@ print(databtiidn)
    library(dplyr)
    library(tidyr)
    
- # Create a data frame from the provided data
+   # Create a data frame from the provided data
    data <- data.frame(
      Category = c('Democracy Status', 'Stateness', 'Monopoly\n on the use of force', 'State Identity', 'No Interferences Religion Dogma', 'Basic Information',
                   'Political Participation', 'Free and fair election', 'Effective power to govern', 'Association / assembly rights', 'Freedom Experience',
@@ -509,18 +509,32 @@ print(databtiidn)
                5.6 ,6 ,5 ,6 ,6 ,5,
                7.7 ,7 ,8 ,8)
    )
-
-# Create a circular bar plot
-newdata <- newdata %>%
-  mutate(id = row_number()) %>%
-  arrange(id)
-
-# Add empty bars to complete the circle
-empty_bar <- 10
-to_add <- matrix(NA, empty_bar, ncol(newdata))
-colnames(to_add) <- colnames(data)
-newdata <- rbind(newdata, to_add)
-newdata$id <- seq(1, nrow(newdata))
-
+   
+ 
+   # Assign colors based on Category
+   data <- data %>%
+     mutate(Color = case_when(
+       Category %in% c('Democracy Status', 'Stateness', 'Monopoly\n on the use of force', 'State Identity', 'No Interferences Religion Dogma', 'Basic Information',
+                       'Political Participation', 'Free and fair election', 'Effective power to govern', 'Association / assembly rights', 'Freedom Experience',
+                       'Rule of Law', 'Separation of powers', 'Independent judiciary', 'Prosecution of office abuse', 'Civil rights',
+                       'Stability of Democratic Institutions', 'Performance of democratic institutions', 'Commitment to democratic institutions',
+                       'Political and Social Integration', 'Party system', 'Interest groups', 'Approval of democracy', 'Social capital') ~ 'red',
+       Category %in% c('Economy Status', 'Level of Socioeconomic Development', 'Socioeconomic barriers',
+                       'Organization of the Market and Competition', 'Market organization', 'Competition policy', 'Liberalization of foreign trade',
+                       'Banking system', 'Monetary and Fiscal Stability', 'Monetary stability', 'Fiscal stability',
+                       'Private Property', 'Property rights', 'Private enterprise',
+                       'Welfare Regime', 'Social safety nets', 'Equal opportunity',
+                       'Economic Performance', 'Output strength', 'Sustainability', 'Environmental policy', 'Education / R&D policy') ~ 'blue',
+       TRUE ~ 'green'
+     )) %>%
+     mutate(id = row_number()) %>%
+     arrange(id)
+   
+   # Add more empty bars for spacing
+   empty_bar <- 20
+   to_add <- matrix(NA, empty_bar, ncol(data))
+   colnames(to_add) <- colnames(data)
+   data <- rbind(data, to_add)
+   data$id <- seq(1, nrow(data))
 
 ```
