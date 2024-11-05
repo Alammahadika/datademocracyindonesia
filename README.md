@@ -445,9 +445,86 @@ This explain scores data to the translate in ranking numeric scala number 1 (Low
                5.6 ,6 ,5 ,6 ,6 ,5,
                7.7 ,7 ,8 ,8)
    )
-   
- 
-   # Assign colors based on Category
+
+print(data)
+
+                                     Category Score
+1                            Democracy Status  6.30
+2                                   Stateness  6.50
+3              Monopoly\n on the use of force  7.00
+4                              State Identity  7.00
+5             No Interferences Religion Dogma  5.00
+6                           Basic Information  7.00
+7                     Political Participation  5.80
+8                      Free and fair election  8.00
+9                   Effective power to govern  6.00
+10              Association / assembly rights  5.00
+11                         Freedom Experience  4.00
+12                                Rule of Law  6.00
+13                       Separation of powers  8.00
+14                      Independent judiciary  5.00
+15                Prosecution of office abuse  5.00
+16                               Civil rights  6.00
+17       Stability of Democratic Institutions  6.50
+18     Performance of democratic institutions  7.00
+19      Commitment to democratic institutions  6.00
+20           Political and Social Integration  6.80
+21                               Party system  6.00
+22                            Interest groups  7.00
+23                      Approval of democracy  7.00
+24                             Social capital  7.00
+25                             Economy Status  6.70
+26         Level of Socioeconomic Development  5.00
+27                     Socioeconomic barriers  5.00
+28 Organization of the Market and Competition  6.50
+29                        Market organization  6.00
+30                         Competition policy  5.00
+31            Liberalization of foreign trade  7.00
+32                             Banking system  8.00
+33              Monetary and Fiscal Stability  7.50
+34                         Monetary stability  8.00
+35                           Fiscal stability  8.00
+36                           Private Property  6.00
+37                            Property rights  6.00
+38                         Private enterprise  6.00
+39                             Welfare Regime  5.50
+40                         Social safety nets  6.00
+41                          Equal opportunity  5.00
+42                       Economic Performance  8.00
+43                            Output strength  8.00
+44                             Sustainability  4.00
+45                       Environmental policy  3.00
+46                     Education / R&D policy  5.00
+47                           Governance Index  5.48
+48                        Level of Difficulty  5.10
+49                     Structural constraints  5.10
+50                   Civil society traditions  6.00
+51                         Conflict intensity  5.00
+52             GNI p.c. Atlas method rescaled  6.00
+53                    UN Educ. Index rescaled  3.00
+54                     Governance Performance  6.15
+55                        Steering Capability  6.30
+56                             Prioritization  7.00
+57                             Implementation  6.00
+58                            Policy learning  6.00
+59                        Resource Efficiency  5.00
+60                    Efficient use of assets  5.00
+61                        Policy coordination  6.00
+62                     Anti-corruption policy  4.00
+63                         Consensus-Building  5.60
+64                         Consensus on goals  6.00
+65                     Anti-democratic actors  5.00
+66             Cleavage / conflict management  6.00
+67                        Public consultation  6.00
+68                             Reconciliation  5.00
+69                  International Cooperation  7.70
+70                   Effective use of support  7.00
+71                                Credibility  8.00
+72                       Regional cooperation  8.00
+
+```
+```r
+# Assign colors based on Category
    data <- data %>%
      mutate(Color = case_when(
        Category %in% c('Democracy Status', 'Stateness', 'Monopoly on the use of force', 'State Identity', 'No Interferences Religion Dogma', 'Basic Information',
