@@ -478,6 +478,14 @@ This explain scores data to the translate in ranking numeric scala number 1 (Low
 
 ```r
 library(ggplot2)
+
+ # Add more empty bars for spacing
+  empty_bar <- 20
+   to_add <- matrix(NA, empty_bar, ncol(data))
+   colnames(to_add) <- colnames(data)
+   data <- rbind(data, to_add)
+   data$id <- seq(1, nrow(data))
+   
    # Create the plot
    label_data <- data
    number_of_bar <- nrow(data)
@@ -500,14 +508,13 @@ library(ggplot2)
      # Display Category names
      geom_text(data = label_data, aes(x = id, y = Score + 1.5, label = Category, hjust = hjust), color = "black", fontface = "bold", alpha = 0.7, size = 1.5, angle = label_data$angle, inherit.aes = FALSE) +
      # Display Score values
-     geom_text(aes(x = as.factor(id), y = Score - 0.5, label = Score), color = "black", size = 2) +
+     geom_text(aes(x = as.factor(id), y = Score - 0.5, label = Score), color = "white", size = 2) +
      # Add central legend
-     annotate("text", x = 0, y = -5, label = "Indonesia Transformation Index 2024", color = "black", fontface = "bold", size = 3) +
-     annotate("text", x = 0, y = -6, label = "Political Transformation", color = "darkred",fontface = "bold", size = 2) +
-     annotate("text", x = 0, y = -7, label = "Economic Transformation", color = "darkblue",fontface = "bold", size = 2) +
-     annotate("text", x = 0, y = -8, label = "Governance", color = "darkgreen", fontface = "bold", size = 2) 
+     annotate("text", x = 0, y = -12, label = "Indonesia Transformation Index 2024", color = "black", fontface = "bold", size = 3) +
+     annotate("text", x = 0, y = -13, label = "Political Transformation", color = "darkred",fontface = "bold", size = 2) +
+     annotate("text", x = 0, y = -14, label = "Economic Transformation", color = "darkblue",fontface = "bold", size = 2) +
+     annotate("text", x = 0, y = -15, label = "Governance", color = "darkgreen", fontface = "bold", size = 2) 
      
-   
    print(p)
    
 ```
