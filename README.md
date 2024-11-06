@@ -652,13 +652,6 @@ Category Score     Color id
 ```r
 library(ggplot2)
 
- # Add more empty bars for spacing
-  empty_bar <- 20
-   to_add <- matrix(NA, empty_bar, ncol(data))
-   colnames(to_add) <- colnames(data)
-   data <- rbind(data, to_add)
-   data$id <- seq(1, nrow(data))
-   
    # Create the plot
    label_data <- data
    number_of_bar <- nrow(data)
